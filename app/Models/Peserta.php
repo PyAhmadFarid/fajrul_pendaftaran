@@ -19,10 +19,19 @@ class Peserta extends Model
         "user_id",
         "foto",
         "gender",
-        'bukti_pembayaran'
+        'bukti_pembayaran',
+        'status'
     ];
 
     public function user(){
         return $this->belongsTo(User::class);
     }
+    public function kelengkapan(){
+        if($this->tgl_lahir && $this->alamat && $this->nomer_hp && $this->foto){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
