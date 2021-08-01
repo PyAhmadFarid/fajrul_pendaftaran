@@ -11,7 +11,7 @@
             <div class="text-center font-semibold text-2xl pb-10">Form Pendaftaran</div>
             <div class="mb-5">
                 <label class=" text-gray-700 font-semibold" for="nama">Nama</label>
-                <input class=" border rounded-md w-full px-3 py-2" type="text" id="nama" name="nama" placeholder="Nama">
+                <input value="{{old('nama')}}" class=" border rounded-md w-full px-3 py-2" type="text" id="nama" name="nama" placeholder="Nama">
 
                 @if ($errors->has('nama'))
                     <small class=" text-red-500">{{ $errors->first('nama') }}</small>
@@ -20,7 +20,7 @@
             </div>
             <div class="mb-5">
                 <label class=" text-gray-700 font-semibold" for="email">E-mail</label>
-                <input class=" border rounded-md w-full px-3 py-2" type="text" id="email" name="email" placeholder="E-Mail">
+                <input value="{{old('email')}}" class=" border rounded-md w-full px-3 py-2" type="text" id="email" name="email" placeholder="E-Mail">
 
                 @if ($errors->has('email'))
                     <small class=" text-red-500">{{ $errors->first('email') }}</small>
@@ -48,7 +48,7 @@
             </div>
             <div class="mb-5">
                 <label class=" text-gray-700 font-semibold" for="buktiPembayaran">Bukti Pembayaran</label>
-                <input class=" border rounded-md w-full px-3 py-2" type="file" id="buktiPembayaran" name="buktiPembayaran"
+                <input value="{{old('buktiPembayaran')}}" class=" border rounded-md w-full px-3 py-2" type="file" id="buktiPembayaran" name="buktiPembayaran"
                     placeholder="buktiPembayaran" required="required">
                 @if ($errors->has('buktiPembayaran'))
                     <small class=" text-red-500">{{ $errors->first('buktiPembayaran') }}</small>

@@ -21,10 +21,12 @@
                 <div class="splide__slide h-2/5 flex justify-center overflow-hidden">
                     <img class="w-full"  src="{{ asset('image/2.PNG') }}" >
                 </div>
+
                 {{-- <div class="splide__slide h-2/5 flex justify-center overflow-hidden">
                     <img class="w-full"  src="{{ asset('image/3.png') }}" >
                 </div>
                  --}}
+                 
                 {{-- <img class="splide__slide" src="{{ asset('image/1.jpg') }}" >
                 <img class="splide__slide" src="{{ asset('image/2.PNG') }}" >
                 <img class="splide__slide" src="{{ asset('image/3.png') }}" >

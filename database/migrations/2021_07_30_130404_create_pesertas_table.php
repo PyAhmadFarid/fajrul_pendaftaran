@@ -24,6 +24,7 @@ class CreatePesertasTable extends Migration
             $table->string('foto')->nullable();
             $table->string('bukti_pembayaran');
             $table->tinyInteger('gender')->nullable();
+            $table->tinyInteger('status')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

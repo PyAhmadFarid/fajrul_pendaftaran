@@ -15,9 +15,6 @@ class dataPesertaController extends Controller
     public function view(){
 
         $peserta = Peserta::where('user_id', '=', auth()->id())->with('user')->get()->first();
-
-
-
         return view('peserta.dataPeserta',['peserta'=>$peserta]);
     }
 

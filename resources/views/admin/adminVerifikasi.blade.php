@@ -2,18 +2,15 @@
 @section('content')
 
     @include('components.navbar')
-    <div class="  flex bg-white m-5 overflow-hidden rounded-md">
+    <div class="  flex bg-white m-10 overflow-hidden rounded-md">
         <table class="w-full table-auto text-sm">
             <thead class=" bg-green-200 text-green-900">
                 <tr>
                     <th class="p-3">
-                        NAMA
+                        Nama
                     </th>
                     <th class="p-3">
-                        Kelas
-                    </th>
-                    <th class="p-3">
-                        Guru
+                        Status
                     </th>
                     <th>
 
@@ -24,13 +21,10 @@
                 {{-- @foreach ($kelas as $s) --}}
                     <tr class=" border-b hover:bg-gray-50">
                         <td class="p-3">
-                            bb
+                            fajrul
                         </td>
                         <td class="p-3 font-semibold">
-                            bb
-                        </td>
-                        <td class="p-3 font-semibold">
-                            aaa
+                            belum verifikasi
                         </td>
                         <td>
 
