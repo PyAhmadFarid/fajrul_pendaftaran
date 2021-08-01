@@ -32,10 +32,14 @@ Route::group(['middleware' => 'role:user'], function () {
     Route::get('/data_peserta',[dataPesertaController::class,'view'])->name('dataPeserta');
     Route::post('/data_peserta',[dataPesertaController::class,'save']);
 });
+
+
 Route::group(['middleware' => 'role:admin'], function () {
 
     Route::get('/verifikasi',[adminVerifikasiController::class,'view'])->name('adminVerifikasi');
     Route::post('/verifikasi',[adminVerifikasiController::class,'save']);
+
+    Route::get('/verPeserta/{peserta}',[adminVerifikasiController::class,'verPeserta'])->name('verPeserta');
 });
 
 

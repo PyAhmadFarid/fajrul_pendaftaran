@@ -14,4 +14,8 @@ class adminVerifikasiController extends Controller
 
         return view('admin.adminVerifikasi',['pesertas'=>$peserta]);
     }
+
+    public function verPeserta(Peserta $peserta){
+        return view('admin.adminSetVer',['peserta'=>$peserta]);
+    }
 }
