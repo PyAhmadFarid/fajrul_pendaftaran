@@ -22,6 +22,11 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/about',function(){
+    return view('about');
+})->name('about');
+
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/login', [AuthController::class, 'loginView'])->name('login');
     Route::post('/login', [AuthController::class, 'login']);

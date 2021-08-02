@@ -25,7 +25,7 @@
             <a class="{{Route::currentRouteName() == 'home' ? 'text-green-500' : ''}} px-4 py-2 mt-2 text-sm font-semibold md:mt-0 hover:text-green-500 focus:text-green-500 focus:outline-none"
                 href="{{route('home')}}">Home</a>
             <a class="{{Route::currentRouteName() == 'about' ? 'text-green-500' : ''}} px-4 py-2 mt-2 text-sm font-semibold md:mt-0 hover:text-green-500 focus:text-green-500 focus:outline-none"
-                href="#">About</a>
+                href="{{route('about')}}">About</a>
 
             @role('user')
             <a class="{{Route::currentRouteName() == 'dataPeserta' ? 'text-green-500' : ''}} px-4 py-2 mt-2 text-sm font-semibold md:mt-0 hover:text-green-500 focus:text-green-500 focus:outline-none"
