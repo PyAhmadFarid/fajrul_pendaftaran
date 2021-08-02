@@ -16,6 +16,8 @@ class adminVerifikasiController extends Controller
     }
 
     public function verPeserta(Peserta $peserta){
+
+        //dd($peserta->foto);
         return view('admin.adminSetVer',['peserta'=>$peserta]);
     }
 }

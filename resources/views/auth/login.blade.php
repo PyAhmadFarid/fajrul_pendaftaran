@@ -11,14 +11,14 @@
             <div class="text-center font-semibold text-2xl pb-10">Selamat Datang!</div>
             <div class="mb-5">
                 <label class=" text-gray-700 font-semibold" for="email">E-mail</label>
-                <input class=" border rounded-md w-full px-3 py-2" type="text" id="email" name="email" placeholder="E-Mail">
+                <input class=" focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 border rounded-md w-full px-3 py-2" type="text" id="email" name="email" placeholder="E-Mail">
                 @if ($errors->has('email'))
                     <small class=" text-red-500">{{ $errors->first('email') }}</small>
                 @endif
             </div>
             <div class="mb-5">
                 <label class=" text-gray-700 font-semibold" for="password">Password</label>
-                <input class=" border rounded-md w-full px-3 py-2" type="password" id="password" name="password"
+                <input class="focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 border rounded-md w-full px-3 py-2" type="password" id="password" name="password"
                     placeholder="Password">
                 @if ($errors->has('password'))
                     <small class=" text-red-500">{{ $errors->first('password') }}</small>

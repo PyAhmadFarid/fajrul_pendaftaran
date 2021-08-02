@@ -59,8 +59,8 @@ class AuthController extends Controller
         $user->assignRole('user');
 
         $fileName = $user->id.time().'_'.$request->nama.'_.'.$request->buktiPembayaran->extension();
-
-        $request->buktiPembayaran->move(public_path('bukti_pembayaran',$fileName));
+        // dd($fileName);
+        $request->buktiPembayaran->move(public_path('bukti_pembayaran'),$fileName);
 
         Peserta::create([
             'nama' =>$request->nama,
