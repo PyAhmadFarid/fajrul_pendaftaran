@@ -37,18 +37,20 @@
                             <td class="p-4  text-red-500"> Belum Lengkap </td>
                         @endif
 
-                        @if ($peserta->status)
-                            @if ($peserta->status == 1)
+                        @if ($peserta->status === null)
+                            <td class="p-4 font-semibold">Pending</td>
+                        @else
+                            @if ($peserta->status === 1)
                                 <td class="p-4 font-semibold text-green-500">Lolos</td>
                             @else
                                 <td class="p-4 font-semibold text-red-500">Tidak lolos</td>
                             @endif
-                        @else
-                            <td class="p-4 font-semibold">Pending</td>
+
                         @endif
 
                         <td class="p-4 flex justify-center items-center">
-                            <a href="{{ route('verPeserta',$peserta->id) }}" class=" rounded-full font-semibold mr-2">Verifikasi</a>
+                            <a href="{{ route('verPeserta', $peserta->id) }}"
+                                class=" rounded-full font-semibold mr-2">Verifikasi</a>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

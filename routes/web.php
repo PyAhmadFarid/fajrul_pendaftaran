@@ -4,6 +4,8 @@ use App\Http\Controllers\adminVerifikasiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\dataPesertaController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +33,10 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => 'role:user'], function () {
     Route::get('/data_peserta',[dataPesertaController::class,'view'])->name('dataPeserta');
     Route::post('/data_peserta',[dataPesertaController::class,'save']);
+    Route::get('/pengunguman',function(){
+        $status = Auth::user()->peserta->status;
+        return view('peserta.pengunguman',["status"=>$status]);
+    })->name('pengunguman');
 });
 
 
@@ -40,6 +46,7 @@ Route::group(['middleware' => 'role:admin'], function () {
     Route::post('/verifikasi',[adminVerifikasiController::class,'save']);
 
     Route::get('/verPeserta/{peserta}',[adminVerifikasiController::class,'verPeserta'])->name('verPeserta');
+    Route::post('/verPeserta/{peserta}',[adminVerifikasiController::class,'verPesertaSave']);
 });
 
 

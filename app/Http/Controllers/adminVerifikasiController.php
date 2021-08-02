@@ -20,4 +20,12 @@ class adminVerifikasiController extends Controller
         //dd($peserta->foto);
         return view('admin.adminSetVer',['peserta'=>$peserta]);
     }
+
+    public function verPesertaSave(Peserta $peserta,Request $request){
+
+        $peserta->status = $request->status;
+        $peserta->save();
+
+        return redirect()->route('adminVerifikasi');
+    }
 }
